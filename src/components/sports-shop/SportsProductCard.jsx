@@ -13,7 +13,7 @@ export default function SportsProductCard({ producto, onAdd }) {
   const stock = producto.stock || 0;
 
   return (
-    <div 
+    <div
       className="group relative bg-stone-900 rounded-2xl overflow-hidden transition-all duration-500 hover:shadow-[0_20px_40px_rgba(0,0,0,0.4)]"
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
@@ -28,18 +28,25 @@ export default function SportsProductCard({ producto, onAdd }) {
       {/* Contenedor de Imagen */}
       <div className="relative h-80 overflow-hidden bg-stone-800">
         <img
-          src={image} 
+          src={image}
           alt={name}
           className="h-full w-full object-cover transition-all duration-700 group-hover:scale-110"
         />
-        
+
         {/* Botón rápido de compra */}
         <div className="absolute inset-x-0 bottom-0 p-4 translate-y-full group-hover:translate-y-0 transition-transform duration-300 bg-gradient-to-t from-black/80 to-transparent">
-          <button 
-            onClick={() => onAdd(producto)} 
-            className="w-full bg-white text-black py-3 rounded-xl font-bold text-xs uppercase tracking-widest hover:bg-orange-600 hover:text-white transition-colors"
+          <button
+            onClick={(e) => {
+              e.stopPropagation(); // Evita que el toque se pierda
+              onAdd();
+            }}
+            className="w-full bg-orange-600 text-black font-black py-3 rounded-xl 
+             uppercase text-xs tracking-widest transition-all
+             active:scale-95 z-30
+             md:opacity-0 md:group-hover:opacity-100 
+             opacity-100 mt-4 shadow-lg shadow-orange-600/20"
           >
-            Añadir al Carrito
+            Añadir al carrito +
           </button>
         </div>
       </div>
