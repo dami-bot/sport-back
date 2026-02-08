@@ -16,7 +16,7 @@ const categorias = [
   {
     id: 3,
     nombre: 'Accesorios',
-    imagen: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ1pyABqoLOBGAIz2e1xRO4h3PkhnTogjx6pw&s',
+    imagen: 'https://plus.unsplash.com/premium_photo-1682435566673-cedb75cd7459?w=1000&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8ZnJlZSUyMGltYWdlcyUyMGFjY2Vzb3Jpb3MlMjBkZXBvcnRpdm9zfGVufDB8fDB8fHww',
     frase: 'El equipo que necesitás'
   },
   {
